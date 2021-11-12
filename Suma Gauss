@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+int printRecSum(int curr)
+{
+    //printf("%d\n", curr); imprime los números a sumar.
+    if (curr==0){
+        return curr;
+    }
+    return curr+ printRecSum(curr-1);
+}
+int main(int argc, char const *argv[]){
+    int v = printRecSum(5);
+    printf("La suma de 1 hasta 5 es: %d\n", v);
+    return 0;
+}
